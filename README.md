@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [github](https://github.com/iskandar13abdurakhmonov/job-listing)
+-   Live Site URL: [netlify](https://master--spiffy-bombolone-fd43ee.netlify.app/)
 
 ## My process
 
