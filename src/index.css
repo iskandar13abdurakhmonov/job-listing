@@ -61,13 +61,15 @@ body {
     content: '';
     height: 156px;
     width: 100%;
-    background-image: url('./images/bg-header-desktop.svg');
+    background-image: url('../public/images/bg-header-desktop.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .main {
+    margin-bottom: 200px;
+    width: 100%;
     flex: 1 1 auto;
     z-index: 10;
 }

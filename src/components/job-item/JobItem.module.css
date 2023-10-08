@@ -81,6 +81,12 @@
     color: #333F3D;
     font-weight: 700;
     font-size: 22px;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+.position:hover {
+    color: #61A29C;
 }
 
 .leftContentBottom {
@@ -133,4 +139,6 @@
     color: #7E8887;
 }
 
-.jobitemRightContent {}
+.jobitemRightContent {
+    display: flex;
+}

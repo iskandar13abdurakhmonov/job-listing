@@ -1,0 +1,4 @@
+.jobList {
+    display: flex;
+    flex-direction: column;
+}

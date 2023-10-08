@@ -2,9 +2,18 @@ import React from 'react'
 import style from './JobItem.module.css'
 import Button from '../../UI/Button'
 
-export default function JobItem({ job }) {
+export default function JobItem({ job, onTagClick }) {
+
+    let tags = [job.role, job.level]
+    if(job.languages) tags.push(...job.languages)
+    if(job.tools) tags.push(...job.tools)
+    
     return (
-        <li className={`${style.jobItem} ${job.featured && style.jobItemRightBorder}`}>
+        <li
+            className={`${style.jobItem} ${
+                job.featured && style.jobItemRightBorder
+            }`}
+        >
             <div className={style.jobItemLeftContent}>
                 <img
                     className={style.img}
@@ -33,16 +42,7 @@ export default function JobItem({ job }) {
                 </div>
             </div>
             <div className={style.jobitemRightContent}>
-                <Button>{job.role}</Button>
-                <Button>{job.level}</Button>
-                {job.languages &&
-                    job.languages.map((lang, idx) => (
-                        <Button key={idx}>{lang}</Button>
-                    ))}
-                {job.tools &&
-                    job.tools.map((tool, idx) => (
-                        <Button key={idx}>{tool}</Button>
-                    ))}
+                {tags ? tags.map(tag => <Button onTagClick={onTagClick}>{tag}</Button>) : ''}
             </div>
         </li>
     )

@@ -7,6 +7,12 @@
     background-color: #EFF5F4;
     cursor: pointer;
     border-radius: 5px;
+    transition: 0.3s ease-in;
+}
+
+.btn:hover {
+    color: #EFFFFF;
+    background-color: #5EA4A3;
 }
 
 .btn:not(:last-child) {

@@ -1,0 +1,91 @@
+.filter {
+    margin: 0 0 40px 0;
+    padding: 20px 0 20px 40px;
+    display: flex;
+    overflow: hidden;
+    width: 1070px;
+    background-color: #fff;
+    border-radius: 4px;
+    position: absolute;
+    top: -110px;
+    box-shadow: 0px 11px 40px -22px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 0px 11px 40px -22px rgba(0,0,0,0.65);
+    -moz-box-shadow: 0px 11px 40px -22px rgba(0,0,0,0.65);
+}
+
+.filterList {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+}
+
+.filterItem {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    background-color: #EEF8F5;
+    border-radius: 3px;
+}
+
+.filterItem:not(:last-child) {
+    margin: 0 16px 0 0;
+}
+
+.filterText {
+    padding: 10px 12px 11px 9px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #5DA4A5;
+} 
+
+.btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5DA4A5;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.btn:hover {
+    background-color: #2B3A3B;
+
+}
+
+.cross {
+    color: #FAFBFC;
+    stroke-width: 2;
+}
+
+.clearBtn {
+    margin: 0 40px 0 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #899090;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.clearBtn:hover {
+    color: #5DA4A5;
+
+    &::after {
+        background-color: #5DA4A5;
+    }
+}
+
+.clearBtn::after {
+    position: absolute;
+    bottom: 7px;
+    right: 0;
+    width: 43px;
+    height: 1px;
+    content: '';
+    background-color: #899090;
+}
