@@ -41,33 +41,6 @@ function App() {
 
     const filteredJobs = jobs.filter(handleFilter)
 
-    // const filterRole = (role) => {
-    //     const sortedRole = [...jobs].filter((job) => job.role === role)
-    //     setJobs(sortedRole)
-    //     setFilters([...[], role])
-    // }
-
-    // const filterLevel = (level) => {
-    //     setJobs(jobs.filter((job) => job.level !== level))
-    // }
-
-    // const languagesFilter = (language) => {
-    //     setJobs(
-    //         jobs.languages.filter(
-    //             (jobLanguage) => jobLanguage.language !== language
-    //         )
-    //     )
-    // }
-
-    // const toolsFilter = (tool) => {
-    //     setJobs(jobs.tools?.filter((jobTool) => jobTool.tool !== tool))
-    // }
-
-    // const handleDeleteFilter = (filterName) => {
-    //     setFilters(filters.filter((filter) => filter !== filterName))
-    //     setJobs([...jobs])
-    // }
-
     return (
         <div className="wrapper">
             <main className="main">
