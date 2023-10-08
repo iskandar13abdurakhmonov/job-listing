@@ -6,16 +6,14 @@
     background-color: #fff;
     overflow: hidden;
     border-radius: 7px;
-    box-shadow: 0px 11px 40px -22px rgba(0,0,0,0.65);
-    -webkit-box-shadow: 0px 11px 40px -22px rgba(0,0,0,0.65);
-    -moz-box-shadow: 0px 11px 40px -22px rgba(0,0,0,0.65);
+    box-shadow: 0px 11px 40px -22px rgba(0, 0, 0, 0.65);
+    -webkit-box-shadow: 0px 11px 40px -22px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 0px 11px 40px -22px rgba(0, 0, 0, 0.65);
 }
 
 .jobItemRightBorder {
     border-left: 5px solid #5DA5A3;
 }
-
-
 
 .jobItem:not(:last-child) {
     margin: 0 0 24px 0;
@@ -74,7 +72,7 @@
 .leftContentMiddle {
     margin: 0 0 18px 0;
     display: flex;
-} 
+}
 
 .position {
     margin: 0 0 0 0;
@@ -141,4 +139,49 @@
 
 .jobitemRightContent {
     display: flex;
+}
+
+@media (max-width: 950px) {
+
+    .jobItem {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100%;
+    }
+
+    .jobItemLeftContent {
+        margin: 0 0 50px 0;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .jobItemLeftContent::after {
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        content: '';
+        height: 1px;
+        width: 100%;
+        background-color: #BEC0BF;
+    }
+
+    .jobitemRightContent {
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .img {
+        margin: 0 0 20px 0;
+    }
+
+    .jobitemRightContent {
+        justify-content: start;
+    }
 }

@@ -53,7 +53,7 @@ function App() {
                                 onClearFilters={handleClearFilters}
                             />
                         )}
-                        <JobList>
+                        <JobList filters={filters}>
                             {filteredJobs.map((job) => (
                                 <JobItem
                                     job={job}

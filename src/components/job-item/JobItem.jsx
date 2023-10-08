@@ -3,11 +3,10 @@ import style from './JobItem.module.css'
 import Button from '../../UI/Button'
 
 export default function JobItem({ job, onTagClick }) {
-
     let tags = [job.role, job.level]
-    if(job.languages) tags.push(...job.languages)
-    if(job.tools) tags.push(...job.tools)
-    
+    if (job.languages) tags.push(...job.languages)
+    if (job.tools) tags.push(...job.tools)
+
     return (
         <li
             className={`${style.jobItem} ${
@@ -42,7 +41,11 @@ export default function JobItem({ job, onTagClick }) {
                 </div>
             </div>
             <div className={style.jobitemRightContent}>
-                {tags ? tags.map(tag => <Button onTagClick={onTagClick}>{tag}</Button>) : ''}
+                {tags
+                    ? tags.map((tag) => (
+                          <Button onTagClick={onTagClick}>{tag}</Button>
+                      ))
+                    : ''}
             </div>
         </li>
     )

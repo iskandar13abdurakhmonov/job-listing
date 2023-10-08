@@ -1,25 +1,26 @@
 .filter {
     margin: 0 0 40px 0;
-    padding: 20px 0 20px 40px;
+    padding: 20px 40px 20px 40px;
     display: flex;
     overflow: hidden;
-    width: 1070px;
+    max-width: 1070px;
     background-color: #fff;
     border-radius: 4px;
-    position: absolute;
     top: -110px;
-    box-shadow: 0px 11px 40px -22px rgba(0,0,0,0.65);
-    -webkit-box-shadow: 0px 11px 40px -22px rgba(0,0,0,0.65);
-    -moz-box-shadow: 0px 11px 40px -22px rgba(0,0,0,0.65);
+    box-shadow: 0px 11px 40px -22px rgba(0, 0, 0, 0.65);
+    -webkit-box-shadow: 0px 11px 40px -22px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 0px 11px 40px -22px rgba(0, 0, 0, 0.65);
 }
 
 .filterList {
+    width: 100%;
     display: flex;
     flex: 1 1 auto;
     align-items: center;
 }
 
 .filterItem {
+    margin: 0 16px 0 0;
     height: 32px;
     display: flex;
     align-items: center;
@@ -27,16 +28,12 @@
     border-radius: 3px;
 }
 
-.filterItem:not(:last-child) {
-    margin: 0 16px 0 0;
-}
-
 .filterText {
     padding: 10px 12px 11px 9px;
     font-size: 18px;
     font-weight: 700;
     color: #5DA4A5;
-} 
+}
 
 .btn {
     width: 32px;
@@ -62,7 +59,7 @@
 }
 
 .clearBtn {
-    margin: 0 40px 0 0;
+    margin: 0 0 0 0;
     font-size: 18px;
     font-weight: 700;
     color: #899090;
@@ -76,16 +73,28 @@
     color: #5DA4A5;
 
     &::after {
+        position: absolute;
+        bottom: 7px;
+        right: 0;
+        width: 43px;
+        height: 1px;
+        content: '';
+        background-color: #899090;
         background-color: #5DA4A5;
     }
 }
 
-.clearBtn::after {
-    position: absolute;
-    bottom: 7px;
-    right: 0;
-    width: 43px;
-    height: 1px;
-    content: '';
-    background-color: #899090;
+@media (max-width: 550px) {
+
+    .filter {
+        top: -180px;
+    }
+
+    .filterList {
+        flex-wrap: wrap;
+    }
+
+    .filterItem {
+        margin: 0 16px 10px 0;
+    }
 }
